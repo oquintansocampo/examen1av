@@ -1,5 +1,9 @@
 package examencod;
 
+/**
+ *
+ * @author oquintansocampo
+ */
 public class ExamenCOD {
 
     /**
@@ -7,20 +11,25 @@ public class ExamenCOD {
      */
     public static void main(String[] args) {
         int num = 11;
-        if (parImpar(num)) {
+        if (primos(num)) {
             System.out.println("Es numero primo");
         } else {
             System.out.println("NO es numero primo");
         }
 
         for (int x = 2; x < 1000; x++) {
-            if (parImpar(x)) {
+            if (primos(x)) {
                 System.out.print(x + " ");
             }
         }
     }
 
-    public static boolean parImpar(int var) {
+    /**
+     * Devuelve true si var es primo, false si var no es primo
+     * @param var
+     * @return boolean aux
+     */
+    public static boolean primos(int var) {
         int j = 2;
         boolean aux = true;
         while ((aux) && (j != var)) {
