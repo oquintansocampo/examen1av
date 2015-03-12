@@ -1,5 +1,7 @@
 package examencod;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author oquintansocampo
@@ -10,14 +12,14 @@ public class ExamenCOD {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int num = 11;
+        int num = Integer.parseInt(JOptionPane.showInputDialog("Introducir numero"));
         if (primos(num)) {
-            System.out.println("Es numero primo");
+            JOptionPane.showMessageDialog(null, "Es numero primo");
         } else {
-            System.out.println("NO es numero primo");
+            JOptionPane.showMessageDialog(null, "NO es numero primo");
         }
 
-        for (int x = 2; x < 1000; x++) {
+        for (int x = num; x < 1000; x++) {
             if (primos(x)) {
                 System.out.print(x + " ");
             }
@@ -26,6 +28,7 @@ public class ExamenCOD {
 
     /**
      * Devuelve true si var es primo, false si var no es primo
+     *
      * @param var
      * @return boolean aux
      */
